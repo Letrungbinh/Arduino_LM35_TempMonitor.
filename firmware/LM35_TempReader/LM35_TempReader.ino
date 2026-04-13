@@ -1,19 +1,21 @@
-/*
- * Du an: Doc nhiet do LM35 va gui qua Serial
- * Mon: Mang Cam Bien - Tuan 03
- */
-
-int adcValue;
-float nhietDo;
+int sensorPin1 = A0;
+int sensorPin2 = A1;
 
 void setup() {
   Serial.begin(9600);
-  delay(100);
 }
 
 void loop() {
-  adcValue = analogRead(A0);
-  nhietDo = (adcValue * 500.0) / 1023.0;
-  Serial.println(nhietDo, 1);
+  int adcValue1 = analogRead(sensorPin1);
+  int adcValue2 = analogRead(sensorPin2);
+
+  float temp1 = (adcValue1 * 500.0) / 1023.0;
+  float temp2 = (adcValue2 * 500.0) / 1023.0;
+
+  // Gửi dữ liệu dạng CSV: temp1,temp2
+  Serial.print(temp1);
+  Serial.print(",");
+  Serial.println(temp2);
+
   delay(1000);
 }
