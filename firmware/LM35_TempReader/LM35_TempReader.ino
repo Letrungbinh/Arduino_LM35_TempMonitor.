@@ -15,11 +15,13 @@ void loop() {
   float temp2 = (adcValue2 * 500.0) / 1023.0;
   float temp3 = (adcValue3 * 500.0) / 1023.0;
 
+  Serial.print("{\"temp1\":");
   Serial.print(temp1);
-  Serial.print(",");
+  Serial.print(",\"temp2\":");
   Serial.print(temp2);
-  Serial.print(",");
-  Serial.println(temp3);
+  Serial.print(",\"temp3\":");
+  Serial.print(temp3);
+  Serial.println("}");
 
   delay(1000);
 }
