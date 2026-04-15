@@ -76,3 +76,10 @@ Arduino_LM35_TempMonitor/
 - Công thức chuyển đổi:
   ADC → Nhiệt độ (°C) = (adcValue * 500.0) / 1023.0
 - LM35: 10mV / °C
+---
+
+## 👨‍💻 Tác giả
+
+- **Lê Trung Bình**
+- 🌐 Website: https://letrungbinh.github.io
+- 💻 GitHub: https://github.com/Letrungbinh
